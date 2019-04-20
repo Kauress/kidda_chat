@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>#KIDDAFER</title>
+   <script src="/socket.io/socket.io.js"></script>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.1.5/css/emoji.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" >
+</head>
+    <body>
+      <div class="container-fluid  px-0">
+       <div class="row mx-0">
+         <div class="col-sm-12 px-0">
+           <div class="row">
+             <div class="col-sm-2">
+           <h4 class="header-text">#hundas</h4>
+           </div>
+           <div class="col-sm-4">
+             <br> <br>
+           <h1 class="header-text">Kidda Fer?</h1>
+           </div>
+           </div>
+    </div <!-- end of col-sm-12 -->
+        </div> <!-- end of row -->
+        </div> <!-- end of container> -->
+
+        <div class="container cont-output">
+         <div class="row">
+           <div class="col-sm-12">
+             <div id="output"></div>         
+          </div <!-- end of col-sm-12 -->
+          </div> <!-- end of row -->
+          </div> <!-- end of container> -->
+
+          <div class="container input">
+           <div class="row no-gutters">
+             <div class="col-sm-8">
+            <input class="mytext" id="message" type="text"placeholder="type your message" data-emojiable="true"/>
+            </div <!-- end of col-sm-8-->
+            <div class="col-sm-4">
+              <input id="handle" type="text"placeholder="@handle"/>
+              <button class="btn btn-block btn-success" id="send">Send</button>
+                 <input type="file" name="pic" accept="image/*">
+                 </div><!-- end of col-sm-4-->
+            </div> <!-- end of row -->
+            </div> <!-- end of container> -->
+
+                <script src="/chat.js"></script>
+                <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <script src="http://onesignal.github.io/emoji-picker/lib/js/config.js" type="text/javascript"></script>
+            <script  src="http://onesignal.github.io/emoji-picker/lib/js/util.js" type="text/javascript"></script>
+            <script src="http://onesignal.github.io/emoji-picker/lib/js/jquery.emojiarea.js" type="text/javascript"></script>
+            <script src="http://onesignal.github.io/emoji-picker/lib/js/emoji-picker.js" type="text/javascript"></script>
+            <script src="/emoji.js" type="text/javascript"></script>
+                </body>
+            </html>
