@@ -13,7 +13,7 @@ sendButton.addEventListener('click', function(){
       message: message.value,
       handle: handle.value
   });
-  message.value = "";
+  //message.value = "";
 });
 
 // Listen for events

@@ -19,6 +19,10 @@ body{
   width:68%;
   height: 400px;
   background-color:#2C2F33;
+  overflow-y: scroll;
+
+}
+#output{
 }
 .input{
   width:70%;
