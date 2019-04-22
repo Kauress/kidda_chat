@@ -1,5 +1,6 @@
 var express = require('express');
 var socket = require('socket.io')
+const userLength = 0;
 // App setup
 var app = express();
 var server = app.listen(4000, function(){
@@ -18,6 +19,12 @@ io.on('connection', function(socket){
   socket.on("chat",function(data){
     //when we receive the message we want the server to send it out to all the different clients
     io.sockets.emit("chat",data)
-    console.log(data);
+    //console.log(data);
   });
+
+  // Handle typing event
+  socket.on('typing', function(data){
+      socket.broadcast.emit('typing', data);
+});
+
 });
