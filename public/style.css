@@ -35,6 +35,7 @@ body{
     background-color:#2C2F33;
     color: #FFFFFF;
     border: 3px solid #2C2F33;
+    overflow:auto;
 }
 .fa-smile-o{
   color: #FFFFFF;
@@ -73,11 +74,22 @@ font-size: 14px;
 
 #style-handle{
   color: #7289DA;
-
 }
-#rooms{
-  background-color:red;
-  height: 900px;
+.announcements{
+    color: #7289DA;
+    text-transform: full-width;
+}
+#right-panel{
+  padding-top: 3px;
+  text-align:center;
+  color: #7289DA;
+  border-top: 2px solid #7289DA;
+}
+#left-panel{
+  padding-top: 3px;
+  text-align:center;
+  color: #7289DA;
+  border-top:2px solid #7289DA;
 }
 /*
 #7289DA

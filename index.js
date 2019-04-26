@@ -1,6 +1,6 @@
 var express = require('express');
 var socket = require('socket.io')
-const userLength = 0;
+var clients = 0;
 // App setup
 var app = express();
 var server = app.listen(4000, function(){
@@ -14,7 +14,27 @@ app.use(express.static('public'));
 
 var io= socket(server);
 io.on('connection', function(socket){
-  console.log('made socket connection now', socket.id);
+
+  socket.emit("message", {
+  greeting: "Hi there! Remember, choose your handle! "
+  });
+clients++;
+ socket.broadcast.emit('newclientconnect',{ description: clients + ' clients connected!'});
+ socket.emit('newclientconnect',{ description: clients + ' clients connected!'});
+
+ socket.on('disconnect', function () {
+    clients--;
+    socket.broadcast.emit('newclientconnect',{ description: clients + ' clients connected!'});
+
+ });
+
+
+
+//socket.on('disconnect', function() {
+	 //io.sockets.emit("left",{
+    // message: " User has left"
+  // })
+//});
   //listen for the message sent from the client
   socket.on("chat",function(data){
     //when we receive the message we want the server to send it out to all the different clients
@@ -27,4 +47,4 @@ io.on('connection', function(socket){
       socket.broadcast.emit('typing', data);
 });
 
-});
+});//main

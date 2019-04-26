@@ -33,14 +33,16 @@
 
      <div class="container-fluid" id="output-container">
       <div class="row no-gutters">
-         <div class="col-sm-2 side"></div>
+         <div class="col-sm-2 side" id="left-panel"></div>
          <div class="col-sm-8" id="main-output">
            <div class="row output-row no-gutters">
-             <div class="col-sm-12"id="output"></div>
+             <div class="col-sm-12"id="output">
+               <p class="announcements"></p>
+             </div>
          </div><!-- end of row -->
           <div class="row no-gutters">
            <div class="col-sm-6">
-            <input id="message" type="text" placeholder="Message" />
+            <textarea id="message" type="text" placeholder="Message"></textarea>
           </div><!-- end of col-sm-6-->
           <div class="col-sm-6 no-gutters" id="action-here">
             <input id="handle" type="text" placeholder="Handle" />
@@ -51,7 +53,7 @@
           </div><!--end of col-sm-12 -->
         </div><!-- end of nested row -->
         </div> <!-- end of col-sm-8 -->
-         <div class="col-sm-2 side"></div>
+         <div class="col-sm-2 side" id="right-panel"></div>
       </div> <!-- end of row -->
      </div> <!-- end of container -->
 
